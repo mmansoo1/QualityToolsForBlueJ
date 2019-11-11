@@ -1,11 +1,43 @@
-# Quality Tools for BlueJ - Development Conventions
+# Quality Tools for BlueJ (QT4BJ) - Development Conventions
 
 This document describes intended and preferred conventions
 for development and maintenance of the _Quality Tools for BlueJ_ software product.
-* [Agile Principles](/ConventionGuide.md#Agile-Principles)
-* [Coding Convention Guide](/ConventionGuide.md#Coding-Convention-Guide)
+* [Gradle File Hierarchy](#Gradle-File-Hierarchy)
+* [Agile Principles](#Agile-Principles)
+* [Coding Convention Guide](#Coding-Convention-Guide)
+* [Build Environment](#Build-Environment)
 
- 
+_____ 
+## Gradle File Hierarchy 
+
+### General structure for file hierarchy in gradle build environment.
+### Doc Link: https://docs.gradle.org/current/userguide/organizing_gradle_projects.html
+
+        QualityToolsForBlueJ
+        ├── build.gradle
+        │
+        ├── gradle
+        │   └── integration-test.gradle
+        │
+        ├── gradlew*    (Use gradlew to ensure project version of gradle is declared.)
+        │
+        ├── settings.gradle
+        │
+        └── src         (Source code for compilation goes in main or test.)
+            │
+            ├── main 
+            │   │
+            │   └── java    (Place Java class files here for compilation.)
+            │       │
+            │       └── HelloWorld.java
+            │
+            └── test
+                │
+                └── java    (Place Java test class files here for compilation.)  
+                    │
+                    └── HelloWorldTest.java
+            
+_____ 
 ## Agile Principles
 
 ### Working Software
@@ -41,7 +73,7 @@ Tests associated with successful implementation remains in the code base as _reg
 
 (Note: Test coverage tools may facilitate _tracing forward_ from a test to code that the test is intended to verify.)
 
-
+_____
 ## Coding Convention Guide
 
 ### Style Convention Precedence and References
@@ -62,3 +94,44 @@ If a topic is not covered by any guides, use best judgement and consider opening
 
 - Multiple authors are indicated using multiple @author tags, one tag per line, one author per tag.
 - Where practicable, style conventions are embodied in configuration files for the [Checkstyle](https://checkstyle.sourceforge.io) tool.
+
+_____
+## Build Environment
+
+The following tools are established as comprising and contributing to the build environment for the QT4BJ project.
+
+### Build Automation
+#### Gradle
+TODO: add overview and external links
+
+### Unit Testing Framework
+#### Junit 5
+TODO: add overview and external links
+
+### Test Coverage Assessment
+#### JaCoCo
+TODO: add overview and external links
+
+### Design Complexity Assessment
+#### JaCoCo
+TODO: add overview and external links
+ 
+ 
+### Source Code Shortcoming Identification
+#### Checkstyle
+TODO: add overview and external links
+
+#### PMD
+TODO: add overview and external links
+
+#### SpotBugs
+TODO: add overview and external links
+
+_____
+_The following tools are under consideration for inclusion in the QT4BJ build environment._
+#### Travis CI
+TODO: add overview and external links
+#### OpenClover
+TODO: add overview and external links
+#### AccessLint
+TODO: add overview and external links

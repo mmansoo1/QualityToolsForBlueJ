@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\Users\manso\Desktop\BlueJExtension\.metadata\.plugins\org.eclipse.jdt.core
+2842528100.index
+1563356090.index
